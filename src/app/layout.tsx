@@ -1,3 +1,4 @@
+import "maplibre-gl/dist/maplibre-gl.css";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Sora, Inter } from "next/font/google";
@@ -40,26 +41,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${sora.variable} ${inter.variable}`}>
-      <head>
-        <style dangerouslySetInnerHTML={{ __html: injectTokensCSS() }} />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              name: site.name,
-              url: site.url,
-            }),
-          }}
-        />
-      </head>
-      <body>
+    <html lang="en">
+      <body className="min-h-screen flex flex-col">
         <TopNav />
-        <main className="mx-auto max-w-7xl px-gutter py-section">
-          {children}
-        </main>
+        <main className="flex-1 min-h-0">{children}</main>
       </body>
     </html>
   );

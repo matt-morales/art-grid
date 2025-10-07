@@ -1,16 +1,16 @@
 export const tokens = {
   color: {
-    bg: "#0e0f12",
-    text: "#e7e7ea",
-    muted: "#a1a1aa",
-    primary: "#27c0a7",
-    onPrimary: "#041412",
-    surface: "#16181d",
-    onSurface: "#e7e7ea",
-    surfaceBorder: "#24262d",
+    bg: "#ffffff",
+    text: "#0f172a",
+    muted: "#0f172a",
+    primary: "#000000",
+    onPrimary: "#ffffff",
+    surface: "#ffffff",
+    onSurface: "#0f172a",
+    surfaceBorder: "#rgba(0,0,0,0.6)",
   },
-  radius: { xl: "16px", xxl: "24px" },
-  space: { gutter: "1rem", section: "3.5rem" },
+  radius: { xl: "4px", xxl: "4px" },
+  space: { gutter: "1rem", section: "3rem" },
 } as const;
 
 export function injectTokensCSS() {

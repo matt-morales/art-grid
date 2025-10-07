@@ -10,8 +10,11 @@ body {
   background: theme("colors.bg");
   color: theme("colors.text");
 }
+:root {
+  --nav-h: 80px;
+}
 
-// Focus ring
-:where(a,button,input,select,textarea,[role="button"]) {
+/* Focus ring */
+:where(a, button, input, select, textarea, [role="button"]) {
   @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary;
 }
